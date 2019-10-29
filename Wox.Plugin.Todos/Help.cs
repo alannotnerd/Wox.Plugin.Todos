@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Wox.Plugin.Todos
+namespace Wox.Plugin.TodoPlus
 {
     public class Help
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Wox.Plugin.Todos
+namespace Wox.Plugin.TodoPlus
 {
     public enum TodoCommand
     {

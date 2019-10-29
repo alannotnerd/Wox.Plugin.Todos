@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
 using Wox.Infrastructure.Storage;
+using Mono.Options;
 
-namespace Wox.Plugin.Todos
+namespace Wox.Plugin.TodoPlus
 {
     public class Main : IPlugin, ISettingProvider, ISavable
     {
@@ -50,6 +51,7 @@ namespace Wox.Plugin.Todos
                 case TodoCommand.C:
                     if (query.SecondSearch.Equals("--all", StringComparison.OrdinalIgnoreCase))
                     {
+                        
                         return new List<Result> {
                             new Result {
                                 Title = "Mark all todos as done?",
@@ -175,7 +177,8 @@ namespace Wox.Plugin.Todos
                     {
                         Content = content,
                         Completed = false,
-                        CreatedTime = DateTime.Now
+                        CreatedTime = DateTime.Now,
+                        Tags = new List<string>()
                     });
                     return false;
                 }

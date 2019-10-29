@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Plugin.Todos", "Wox.Plugin.Todos\Wox.Plugin.Todos.csproj", "{4A4B872D-3698-4900-B179-A009FF1F5C04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wox.Plugin.TodoPlus", "Wox.Plugin.Todos\Wox.Plugin.TodoPlus.csproj", "{4A4B872D-3698-4900-B179-A009FF1F5C04}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wox.Plugin", "Wox.Plugin", "{9BC1CC56-A016-4050-9F7A-74515C5FE11C}"
 	ProjectSection(SolutionItems) = preProject

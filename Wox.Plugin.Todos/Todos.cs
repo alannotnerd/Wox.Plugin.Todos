@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using Newtonsoft.Json;
 
-namespace Wox.Plugin.Todos
+namespace Wox.Plugin.TodoPlus
 {
     public class Todo
     {
@@ -14,6 +14,7 @@ namespace Wox.Plugin.Todos
         public string Content { get; set; }
         public bool Completed { get; set; }
         public DateTime CreatedTime { get; set; }
+        public List<string> Tags { get; set; }
     }
 
     public class Todos
@@ -58,7 +59,8 @@ namespace Wox.Plugin.Todos
             Func<Todo, string> subTitleFormatter = null,
             Func<ActionContext, Todo, bool> itemAction = null)
         {
-            return ToResults(_todoList.Where(func), subTitleFormatter, itemAction);
+            Func<Todo, string> defaultSubTitleFormatter = t => { return $"{ToRelativeTime(t.CreatedTime)} {t.Tags.ToString()}".Trim(); };
+            return ToResults(_todoList.Where(func), subTitleFormatter??defaultSubTitleFormatter, itemAction);
         }
 
         public Todos Add(Todo todo, Action callback = null)
